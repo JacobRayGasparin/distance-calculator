@@ -1,0 +1,25 @@
+"""
+Program: 2D Distance Calculator
+Description: Calculates the Euclidean distance between two points in a 2D plane.
+"""
+
+import math
+
+print("--- 2D Distance Calculator ---")
+
+# 1. Gather user inputs with descriptive variable names
+point1_x = float(input("Enter x coordinate for Point 1: "))
+point1_y = float(input("Enter y coordinate for Point 1: "))
+
+point2_x = float(input("Enter x coordinate for Point 2: "))
+point2_y = float(input("Enter y coordinate for Point 2: "))
+
+# 2. Calculate the distance using the Euclidean distance formula
+# Formula: sqrt((x2 - x1)^2 + (y2 - y1)^2)
+horizontal_diff = point2_x - point1_x
+vertical_diff = point2_y - point1_y
+
+distance = math.sqrt(math.pow(horizontal_diff, 2) + math.pow(vertical_diff, 2))
+
+# 3. Output the result formatted to 2 decimal places
+print(f"\nThe distance between the two points is: {distance:.2f}")
